@@ -46,13 +46,14 @@ Vagrant.configure("2") do |config|
   #
    config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+#     vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
    vb.customize ["modifyvm", :id, "--ioapic", "on"] 
     vb.cpus = 2
    end
+
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -70,5 +71,10 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", inline: <<-SHELL
      apt-get install -y qemu
      apt-get install -y git
+     apt-get install -y gdb
+     apt-get install -y ctags
+     apt-get install -y cscope
+     apt-get install -y xorg
+     apt-get install -y genisoimage
    SHELL
 end
