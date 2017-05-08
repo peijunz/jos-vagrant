@@ -77,5 +77,6 @@ Vagrant.configure("2") do |config|
      apt-get install -y cscope
      apt-get install -y xorg
      apt-get install -y genisoimage
+     apt-get install -y gparted
    SHELL
 end
