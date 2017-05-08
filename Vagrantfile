@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty32"
+  config.vm.box = "ubuntu/xenial32"
 
 
   # Disable automatic box update checking. If you disable this, then
@@ -78,5 +78,9 @@ Vagrant.configure("2") do |config|
      apt-get install -y xorg
      apt-get install -y genisoimage
      apt-get install -y gparted
+     apt-get install -y python
+     apt-get install -y make
+     apt-get install -y gcc
+     apt-get install -y linux-tools-common
    SHELL
 end
