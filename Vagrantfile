@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
   #   # Customize the amount of memory on the VM:
    vb.memory = "1024"
    vb.customize ["modifyvm", :id, "--ioapic", "on"] 
-    vb.cpus = 2
+    vb.cpus = 4 
    end
 
   #
@@ -70,7 +70,6 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-     apt-get install -y qemu
      apt-get install -y git
      apt-get install -y gdb
      apt-get install -y ctags
@@ -82,5 +81,11 @@ Vagrant.configure("2") do |config|
      apt-get install -y make
      apt-get install -y gcc
      apt-get install -y linux-tools-common
+	 apt-get install -y pkg-config
+	 apt-get install -y zlib1g-dev
+	 apt-get install -y glib2.0-dev
+	 apt-get install -y libpixman-1-dev
+	 apt-get install -y flex
+	 apt-get install -y bison
    SHELL
 end
