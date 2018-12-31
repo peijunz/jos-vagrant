@@ -81,11 +81,15 @@ Vagrant.configure("2") do |config|
      apt-get install -y make
      apt-get install -y gcc
      apt-get install -y linux-tools-common
-	 apt-get install -y pkg-config
-	 apt-get install -y zlib1g-dev
-	 apt-get install -y glib2.0-dev
-	 apt-get install -y libpixman-1-dev
-	 apt-get install -y flex
-	 apt-get install -y bison
+     apt-get install -y pkg-config
+     apt-get install -y zlib1g-dev
+     apt-get install -y glib2.0-dev
+     apt-get install -y libpixman-1-dev
+     apt-get install -y flex
+     apt-get install -y bison
+     apt-get install -y qemu-system
+		 apt-get install -y bridge-utils
+		 apt-get update
+		 apt-get install -y uml-utilities
    SHELL
 end
