@@ -4,6 +4,10 @@ The gatech vagrant virtual machine
 I've tested the staff solution for jos, labs 1-6 with xenial32 and
 everything looks good to me.  
 
+## Dependencies
++ Virtualbox
++ Vagrant
+
 ## How to
 + All operations should be executed at the directory of `Vagrantfile`
 + Run `vagrant up` to start virtual machine. The first run will install the Ubuntu 16.04 32bit system
